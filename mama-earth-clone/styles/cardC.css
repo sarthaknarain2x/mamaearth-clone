@@ -1,0 +1,76 @@
+.myCard {
+  width: 300px;
+  height: 430px;
+  border: 1px dotted rgba(135, 190, 73, 0.5);
+  border-radius: 6px;
+  text-align: center;
+  margin: 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.myCard > img {
+  width: 100%;
+  margin: 0px;
+}
+.myCard > p {
+  font-size: 12px;
+  line-height: 20px;
+  width: 90%;
+  margin: auto;
+  margin-top: 5px;
+}
+
+#price {
+  font-size: 10px;
+  color: gray;
+  text-decoration: line-through;
+}
+#actualPrice {
+  font-size: 15px;
+  color: black;
+  padding: 2px;
+  text-decoration: none;
+}
+#offer {
+  font-size: 13px;
+  color: red;
+}
+.myCard > button {
+  width: 97%;
+  padding: 10px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: rgb(0, 175, 239);
+  background: #fff;
+  margin: auto;
+  /* margin: 10px; */
+}
+.myCard > button:hover {
+  color: #fff;
+  background: rgb(0, 175, 239);
+  cursor: pointer;
+  border: 1px solid rgb(0, 175, 239);
+}
+.myContainer {
+  width: 1000px;
+  margin: auto;
+}
+.owl-next > span,
+.owl-prev > span {
+  font-size: 50px;
+  color: gray;
+}
+.owl-next > span {
+  position: absolute;
+  top: 170px;
+  right: -10px;
+}
+.owl-prev > span {
+  position: absolute;
+  top: 170px;
+  left: -20px;
+}
+#owl-demo .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

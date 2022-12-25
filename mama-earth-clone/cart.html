@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png">
+    <title>Mamaearth | Official Website | Buy Natural Skin Care Products Online</title>                                
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/newNavbar.css">
+    <!-- <link rel="stylesheet" href="styles/cardC.css"> -->
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+<body>
+    <div id="nav"></div>
+    <div id="checkoutMainDiv">
+        <div id="shopingCartDiv">
+            <div class="title">YOUR SHOPPING CART</div>
+        </div>
+                  <label>Item Details</label>
+
+                  <div>
+                      <button onclick="erase()" id="eraseCart">REMOVE ALL ITEMS FROM CART</button>
+                  </div>
+          
+          <h1 id="noProducts" style="display: none;">No products in cart</h1>
+          <div class="cartSections">
+              <div class="left-section">
+                 
+              </div>
+              
+              <div class="right-section">
+                  <label style="font-weight: bold;font-size: 20px;line-height: 2;color: #6ea30e;">Price Summary</label>
+                  <div class="order-summary">
+                      <div id="amountDiv">Amount</div>
+                      <div class="amt" id="total-price"></div>
+                      
+                      
+                      <div id="taxDiv">Taxes</div>
+                      <div style="padding-top: 0px;" class="amt" id="GstCharges"></div>
+                      <div id="discount_box">
+                        <input type="text" id="coupon" placeholder="ENTER COUPON CODE">
+                        <button id="coup" onclick="discount()">APPLY COUPON</button>
+                    </div>
+
+                       <div class="total" id="totalAMT">Total</div>
+                      <div class="total-amt"><label  id="final-price"></label>
+                      </div>
+                      <div id="incl">(Inclusive of all taxes)</div>
+                  </div>
+                  <button id="checkout" onclick="redirectToPayment()">
+                      Checkout
+                  </button>
+              </div>
+          </div>
+          
+          <button id="cont-shopping" onclick="redirectToProductPage()">
+              Continue Shopping
+          </button>
+      </div>
+      <div id="footerDiv"></div>
+</body>
+</html>
+<script type="module">
+    
+    // ======================================importing Navbar===================================//
+ 
+    import navbar from "./components/newNavbar.js";
+ 
+   let container = document.getElementById("nav");
+ 
+   container.innerHTML = navbar(); 
+ 
+   
+    import footer from "./components/footer.js"
+ 
+     let FD = document.getElementById("footerDiv");
+ 
+     FD.innerHTML = footer();
+
+
+     let lcl = JSON.parse(localStorage.getItem('userDetail'))
+let loggedName = document.getElementById("changingName")   
+console.log(lcl)
+
+if(lcl != null){
+  let nme = (lcl[0].userName)
+  loggedName.innerHTML = ""
+  loggedName.innerHTML = `<span class="iconify" data-icon="bytesize:user"></span>${nme}`
+}
+ </script>
+ 
+<script src="JS/cart.js"></script>

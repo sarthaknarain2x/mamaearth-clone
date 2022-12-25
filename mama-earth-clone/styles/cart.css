@@ -1,0 +1,244 @@
+/* CSS FOR CHECKOUT PAGE */
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    }
+    
+    #checkoutMainDiv{
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* border: 1px solid black; */
+    }
+    
+   
+    
+    #checkoutMainDiv #shopingCartDiv .title
+    {
+        
+         font-size: 22px;     
+         font-weight: 600;
+         /* border: 1px solid red; */
+         /* line-height: 1.5; */
+    }
+    #checkoutMainDiv .cartSections
+    {
+        display: flex;
+        justify-content: space-between;
+        margin-top:5px;
+        /* border: 1px solid red; */
+    }
+    
+    #checkoutMainDiv  .cartSections > div:nth-child(2)
+    {
+        width: 30%;
+        /* border: 1px solid red; */
+    }
+    
+   
+    
+    #checkoutMainDiv  .cartSections .order-summary
+    {
+        width: 86%;
+        background-color: #ededed;
+        height: 300px;
+        border-top: 3px solid #1D1D1D;
+        padding: 10px 20px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 45% 20% 25% 10%;
+        font-size: 12px;
+        color: dimgrey;
+        font-weight: bold;
+        line-height: 1.5;
+        /* border: 1px solid red; */
+       
+    }
+    
+    #checkoutMainDiv  .cartSections .order-summary > .amt
+    {
+        color:  #1D1D1D;
+        text-align: right;
+        padding-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Lato;
+       
+    }
+    
+    #checkoutMainDiv  .cartSections .order-summary > div:nth-child(3),
+    #checkoutMainDiv  .cartSections .order-summary > div:nth-child(4)
+    {
+        border-bottom: 1px solid black;    
+       margin-top: -20%;
+      
+       /* border: 1px solid red; */
+    }
+    
+    #checkoutMainDiv  .cartSections .order-summary > .total
+    {
+        color: #1D1D1D;
+        padding-top: 10px;
+        font-size: 18px;
+       
+    }
+    #checkoutMainDiv  .cartSections .order-summary >  .total-amt > label:nth-child(1)
+    {
+        color: #1D1D1D;
+        font-size: 20px;
+        text-align: right;
+        padding-top: 10px;
+        float: right;
+       
+    }
+    
+    #checkoutMainDiv  .cartSections .right-section > button, #checkoutMainDiv > button
+    {
+        margin-top: 20px;
+        background-color: #00afef;
+        font-size: 20px;
+        padding: 10px;
+        color: white;
+        width: 98%;
+        font-weight: bold;
+        border: none;
+    }
+    
+    #checkoutMainDiv > button
+    {
+        width: 30% !important;
+    }
+    
+    .card
+    {
+        display:grid;
+        grid-template-columns: 20% 80%;
+        width: 100%;
+        row-gap: 20px;
+        border-bottom: 1px solid lightgray;
+        /* margin-top: 10px;
+        margin-bottom: 10px; */
+        
+        /* border: 1px solid red; */
+    }
+    .card img
+    {
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        height: 200px;
+        width: 200px;
+    }
+    .card h3{
+        font-size: 17px;
+        color: #1D1D1D;
+        margin-left: 7%;
+        width: 80%;
+        /* border: 1px solid red; */
+    }
+    .card p{
+        margin-left: 8%;
+        /* font-size: 17px !important; */
+    }
+    .card #titleNprice{
+        /* border: 1px solid red; */
+        /* width: 100%; */
+        margin-left:15%;
+        text-align: left;
+    }
+    #amountDiv{
+        margin-top: 10px;
+        font-size: 18px;
+        color: black;
+    }
+    .card .iconify{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: -1%;
+    }
+     #priceSummaryIcon{
+        font-size: 20px;
+        font-weight: bold;
+         margin-bottom: -3%;
+    
+     }
+     #discount_box{
+         display: flex;
+         margin-top: -18%;
+         height: 35px;
+         width: 22.5vw;
+         border: none;
+         outline: none;
+         border-bottom: 1px solid black;
+         
+         /* border: 1px solid red; */
+       
+     }
+     #discount_box>input{
+         width:700px;
+         border:1px solid #1990bb ;
+         border-bottom:1px solid black;
+         padding:5px 8px;
+         outline: none;
+         
+     }
+     #discount_box>input::placeholder{
+         color:
+         #e46f76;
+         font-weight: 400;
+         /* border: 1px solid red; */
+     }
+     #discount_box>button{
+        width:400px;
+        border:none;
+        background-color: #1990bb;
+        border-bottom:1px solid black;
+        color:white;
+        font-size: 13px;
+        font-weight: bold;
+
+    }
+     #order-summ{
+         display: flex;
+         flex-direction: column;
+         /* border: 1px solid red; */
+     }
+     #taxDiv{
+         font-size: 17px;
+     }
+     #totalAMT{
+         margin-left: -99%;
+         width:40%;
+         margin-top: 35px;
+         font-size: 20px !important;
+         /* border: 1px solid red; */
+         
+     }
+     #total-price{
+         margin-top: -3%;
+         margin-right: -1%;
+         /* margin-bottom: 10px; */
+         /* border: 1px solid red; */
+     }
+     #final-price{
+         margin-top: -25%;
+         margin-right: -99%;
+         /* border: 1px solid red; */
+     }
+     #incl{
+         margin-left: 45px;
+         margin-top:-5px;
+         /* border: 1px solid red; */
+     }
+     #eraseCart{
+         width:250px;
+      height: 35px;
+      padding:5px;
+      margin-left: 70%;   
+      background-color: rgb(231, 229, 229);
+      color:#e46f76;
+      border:none;
+      font-size: 12px;
+      font-weight: 600;
+     }

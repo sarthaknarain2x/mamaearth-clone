@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png">
+    <title>Mamaearth | Official Website | Buy Natural Skin Care Products Online</title>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="styles/newNavbar.css">    
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/products.css">   
+</head>
+<body>  
+    <div id="nav"></div>
+    <div id="shilpa">  <img width="100%"
+        src="https://images.ctfassets.net/66mrrren2unf/62fMX7z3RN55j8FpWnIxhg/1a194a111a058b377248805cdea8449d/Desktop_Without_CTA.jpg?q=40"/> </div>
+
+    <div class="PC-Product-Page">
+        <div class="sortingDiv">
+            <select id="sortByValue" onchange="sortBy()">
+                <option value="default">Sort By</option>
+                <option value="rate">Rating</option>
+                <option value="high">Price-High to Low </option>
+                <option value="low">Price-Low to High </option>                
+            </select>
+        </div>
+        <div id="main">          
+        </div> 
+    </div>   
+    <h1>FAQ'S</h1>
+<div class="mine">
+<button class="accordion">Can I Use Mama Earth Shampoo Daily ?  <i class="fas fa-chevron-down fa-lg"></i> </button>
+<div class="panel">
+  <p>YESS definitely! Mamaearth shampoos are so good as they are free of harmful chemicals and keeps hair healthy, strong and nourished.</p>
+</div>
+
+<button class="accordion">Which is the Best Shampoo for Dandruff ? <i class="fas fa-chevron-down fa-lg"></i> </button>
+<div class="panel">
+  <p>Mamaearth Tea Tree Shampoo is made using natural ingredients and makes sure that dandruff and excess oil is gently worked on & removed. It helps soothe irritating, oily, and flaky scalp by controlling dandruff; thus, giving you an itch-free healthy scalp and nourished hair.
+    </p>
+</div>
+
+<button class="accordion">Which is the Best Shampoo for Hair Regrowth ? <i class="fas fa-chevron-down fa-lg"></i> </button>
+<div class="panel">
+  <p>
+    Onion Oil, rich in Sulphur, Potassium & antioxidants, reduces hair fall & accelerates hair regrowth. One of the newest breakthrough ingredients in hair regrowth, Redensyl, unblocks hair follicles & also boosts new hair growth.
+    </p>
+</div>
+<button class="accordion">Which Shampoo is Best For Oily Hair ? <i class="fas fa-chevron-down fa-lg"></i> </button>
+<div class="panel">
+  <p>Healthline's picks for the best shampoo for oily hair
+    Neutrogena Anti-Residue Shampoo. ...
+    Aveeno Apple Cider Vinegar Blend Shampoo. ...
+    OGX Hydrating + Tea Tree Mint Conditioner. ...
+    Aveda Rosemary Mint Weightless Conditioner. ...
+    Klorane Dry Shampoo with Nettle. ...
+    Desert Essence Lemon Tea Tree Shampoo.
+    </p>
+</div>
+
+<button class="accordion">Can I use Mama Earth Shampoo after Hair Treatment ? <i class="fas fa-chevron-down fa-lg"></i> </button>
+<div class="panel">
+  <p>Yes of course! The best shampoo for hair in India when it comes to chemically treated hair is by Mamaearth. All Mamaearth Shampoos are crafted with natural ingredients and hence suit all hair types.
+</p>
+</div>
+</div>
+    <div id="footerDiv"></div>
+</body>
+</html>
+<script type="module">
+    
+   // ======================================importing Navbar===================================//
+
+   import navbar from "./components/newNavbar.js";
+
+  let container = document.getElementById("nav");
+
+  container.innerHTML = navbar(); 
+
+  ///=============================================================adding Accordion==========================================//
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+ for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+ 
+
+   import footer from "./components/footer.js"
+
+    let FD = document.getElementById("footerDiv");
+
+    FD.innerHTML = footer();
+
+    let lcl = JSON.parse(localStorage.getItem('userDetail'))
+let loggedName = document.getElementById("changingName")   
+console.log(lcl)
+
+if(lcl != null){
+  let nme = (lcl[0].userName)
+  loggedName.innerHTML = ""
+  loggedName.innerHTML = `<span class="iconify" data-icon="bytesize:user"></span>${nme}`
+}
+</script>
+
+<script src="JS/products.js"></script>
